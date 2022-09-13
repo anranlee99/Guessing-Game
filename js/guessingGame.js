@@ -15,6 +15,7 @@ const submitBtn = document.querySelector('#submitBtn');
 submitBtn.addEventListener('click', function(evt) {
   
   const inputEl = document.querySelector('#guessField');
+  console.log("inputel.value: ", inputEl.value)
   if(inputEl.value !== ""){
     prevGuesses.push(inputEl.value);
   }
@@ -72,7 +73,7 @@ function play(min, max){
     game.biggestNum = max;
   }
   let hintEL = document.getElementById('hint')
-  hintEL.innerText = Math.ceil(Math.log2(game.biggestNum - game.smallestNum))
+  hintEL.innerText = Math.ceil(Math.log2(game.biggestNum - game.smallestNum)) + 1;
 
   
   answer = game.play();
