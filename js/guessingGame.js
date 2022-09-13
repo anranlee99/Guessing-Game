@@ -15,7 +15,6 @@ const submitBtn = document.querySelector('#submitBtn');
 submitBtn.addEventListener('click', function(evt) {
   
   const inputEl = document.querySelector('#guessField');
-  console.log("inputel.value: ", inputEl.value)
   if(inputEl.value !== ""){
     prevGuesses.push(inputEl.value);
   }
@@ -31,10 +30,10 @@ rangeBtn.addEventListener('click', function(evt) {
   
   const minEl = document.querySelector('#min');
   const maxEl = document.querySelector('#max');
-  minEl.value = (parseInt(minEl.value));
-  maxEl.value = (parseInt(maxEl.value));
-  if(minEl.value && maxEl.value){
-    play(minEl.value, maxEl.value)
+  let minNum = (parseInt(minEl.value));
+  let maxNum = (parseInt(maxEl.value));
+  if(minNum && maxNum){
+    play(minNum, maxNum)
   }
   minEl.value = null;
   maxEl.value = null;
