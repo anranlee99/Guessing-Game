@@ -31,15 +31,18 @@ rangeBtn.addEventListener('click', function(evt) {
   
   const minEl = document.querySelector('#min');
   const maxEl = document.querySelector('#max');
+  minEl.value = (parseInt(minEl.value));
+  maxEl.value = (parseInt(maxEl.value));
   if(minEl.value && maxEl.value){
     play(minEl.value, maxEl.value)
   }
-  minEl.value = '';
-  maxEl.value = '';
+  minEl.value = null;
+  maxEl.value = null;
 });
 console.log(document.querySelector('#min').value)
 
 function checkAnswer(){
+  console.log("v1")
     if(guess>answer){
       document.getElementById('answer').innerText = "Your guess is too high!";
     } else if (guess < answer){
