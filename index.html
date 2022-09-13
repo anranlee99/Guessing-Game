@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/guessingGame.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Guess the Number Lab</title>
+    
+</head>
+<body>
+    <div class="guessList">
+        <p>
+            Your guesses: <pre class="guesses"></pre>
+        </p>
+    </div>
+    <div class="menu">
+        <h1>Welcome to the Guessing Game!</h1>
+        
+        <p>
+        The rules are as follows:<br>
+        The <strong>GameMaster</strong> provides a secret number. <br>
+        It is your job to guess the correct number. <br>
+        There <strong>IS</strong> a maximum amount of guesses, and it should take no more 
+        than that to guess it!
+        <h3 >Hint: You should get it in more more than: <span id='hint'></span> guesses</h3>
+        <h1 class="announcement">Let the game begin!</h1>
+         </p>
+         <div class="inputContainer">
+            <input id="min" placeholder="min range(optional)" type="number"></input>
+            <input id="max" placeholder="max range(optional)" type="number"></input>
+            <button id="range">Change</button>
+            <input id="guessField" placeholder="your guess here" type="number"></input>
+            <button id="submitBtn">Submit Guess</button>
+            <h4 id="answer"></h4>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

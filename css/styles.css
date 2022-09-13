@@ -1,0 +1,23 @@
+body {
+    background-color: aquamarine;
+    /* white-space: nowrap; */
+    text-align: center;
+    display: flex;
+}
+.menu{
+    width: 900px;
+    height: 400px;
+    display: inline-block;
+}
+.guessList {
+    height: 400px;
+    width: 100px;
+    display: inline-block;
+}
+.inputContainer{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
