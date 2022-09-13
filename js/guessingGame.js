@@ -71,9 +71,9 @@ function play(min, max){
 
   answer = Math.floor(Math.random() * (biggestNum - smallestNum + 1)) + smallestNum;
   prevGuesses = [];
-  console.log("answer: ", answer, "min: ", game.smallestNum, "max: ", game.biggestNum);
+  console.log("answer: ", answer, "min: ", smallestNum, "max: ", biggestNum);
   let hintEL = document.getElementById('hint')
-  hintEL.innerText = Math.ceil(Math.log2(game.biggestNum - game.smallestNum)) + 1;
+  hintEL.innerText = Math.ceil(Math.log2(biggestNum - smallestNum)) + 1;
 
   
   
