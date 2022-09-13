@@ -1,2 +1,2 @@
 # Guessing-Game
-A game that let's the player subconsciously learn binary search
+A game that lets the player subconsciously learn binary search
