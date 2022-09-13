@@ -62,7 +62,7 @@ function play(min, max){
     biggestNum: 100,
     smallestNum: 1,
     play: function() {
-      return this.secretNum = Math.floor(Math.random() * 
+      return Math.floor(Math.random() * 
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
     }
   };
