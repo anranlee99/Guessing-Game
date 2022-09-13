@@ -58,23 +58,18 @@ function checkAnswer(){
 
 
 function play(min, max){
-  const game = {
-    biggestNum: 100,
-    smallestNum: 1,
-    play: function() {
-      return Math.floor(Math.random() * 
-        (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
-    }
-  };
+  let biggestNum = 100;
+  let smallestNum = 1;
+
 
   if(min){
-    game.smallestNum = min;
+    smallestNum = min;
   }
   if(max){
-    game.biggestNum = max;
+    biggestNum = max;
   }
 
-  answer = game.play();
+  answer = Math.floor(Math.random() * (biggestNum - smallestNum + 1)) + smallestNum;
   prevGuesses = [];
   console.log("answer: ", answer, "min: ", game.smallestNum, "max: ", game.biggestNum);
   let hintEL = document.getElementById('hint')
