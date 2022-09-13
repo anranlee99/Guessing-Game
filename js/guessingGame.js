@@ -66,19 +66,22 @@ function play(min, max){
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
     }
   };
+
   if(min){
     game.smallestNum = min;
   }
   if(max){
     game.biggestNum = max;
   }
+
+  answer = game.play();
+  prevGuesses = [];
+  console.log("answer: ", answer, "min: ", game.smallestNum, "max: ", game.biggestNum);
   let hintEL = document.getElementById('hint')
   hintEL.innerText = Math.ceil(Math.log2(game.biggestNum - game.smallestNum)) + 1;
 
   
-  answer = game.play();
-  prevGuesses = [];
-  console.log("answer: ", answer);
+  
 
 
 }
